@@ -5,6 +5,9 @@ import {Routes, Route} from 'react-router-dom'
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Catalog from './components/Catalog';
+import Detail from './components/Detail';
+import NotFound from './components/NotFound';
+import New from './components/New';
 
 function App() {
   return (
@@ -12,7 +15,9 @@ function App() {
     <Header></Header>
     <Routes>
       <Route exact path='/space-character' element={<Catalog></Catalog>}></Route>
-      {/* <Route exact path='/user/:username' element={<User></User>}></Route> */}
+      <Route exact path='/character/:charactername' element={<Detail></Detail>}></Route>
+      <Route exact path='/space-character/new' element={<New></New>}></Route>
+      <Route exact path='*' element={<NotFound></NotFound>} />
     </Routes>
     <Footer></Footer>
     </>
