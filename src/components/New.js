@@ -11,7 +11,7 @@ function New() {
         </Helmet>
     </HelmetProvider>
     <div className='container'>
-
+        form
     </div>
     </>
   )
