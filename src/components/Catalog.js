@@ -49,7 +49,6 @@ function Catalog() {
         </div>
     </div>
     <div className='container grid characters-box'>
-        
         { filteredItems?.map(item => (
             <div className='grid' key={item.id}>
                 <Link to={`/character/${(item.name)}`} > 
@@ -63,8 +62,6 @@ function Catalog() {
             </div>
         ))}
     </div>
-    
-    
     </>
   )
 }

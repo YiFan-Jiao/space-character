@@ -62,9 +62,6 @@ function New() {
             <button className='submit' type='submit'>
                 Submit
             </button>
-            
-            
-           
         </form>
     </div>
     </>

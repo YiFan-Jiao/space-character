@@ -12,7 +12,7 @@ function Header() {
               Home
             </div>
             <div>
-            Character
+              Character
             </div>
             <div>
               Info

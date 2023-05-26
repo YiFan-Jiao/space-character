@@ -7,7 +7,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 /* npm i react-helmet */
 /* react-helmet-async */
 
-
 function Detail() {
     const [index,setIndex] = useState()
     const [status,setStatus] = useState()
@@ -82,7 +81,7 @@ function Detail() {
                         alias: {alias}
                     </div>
                     <div>
-                     abilities: {abilities}
+                        abilities: {abilities}
                     </div>
                 </div>
             </div>

@@ -43,7 +43,6 @@ header {
     cursor: pointer;
 }
 
-
 .head-nav div:hover {
     color: #5C4C46;
 }
@@ -59,7 +58,6 @@ header {
     width: auto;
     cursor: pointer;
 }
-
 
 footer {
     background-color: #242424;
