@@ -1,15 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function Catalog() {
-    const [characters,setCharacters] = useState()
+    const [characters,setCharacters] = useState([])
+    const [option, setOption] = useState('id');
+    let filteredItems = [];
 
     useEffect(()=>{
     const getJson = async () => {
         try {
             const {data} = await Axios.get(`https://finalspaceapi.com/api/v0/character`);
             //console.log(data)
+            //setCharacters(data.sort((a, b) => a.id - b.id))
             setCharacters(data)
         } catch(error) {
             console.log(error)
@@ -17,16 +21,27 @@ function Catalog() {
     }
     getJson();
     },[])
-     
+
+    if(option === 'id') {
+         filteredItems = characters.sort((a, b) => a.id - b.id)
+    } else {
+         filteredItems = characters.sort((a, b) => a.name.localeCompare(b.name));
+    }
   return (
     <>
+    <HelmetProvider>
+        <Helmet>
+            <title>space character</title>
+        </Helmet>
+    </HelmetProvider>
     <div className='grid container buttons-2'>
         <div></div>
         <div className='grid button-2'>
-            <div className='w-btn'>
-                Sort lists
-            </div>
-            <Link to={`/space-character/new`} > 
+            <select className='w-btn' value={option} onChange={(e) => setOption(e.target.value)}>
+                <option value="id">Sort by ID</option>
+                <option value="name">Sort by Name</option>
+            </select>
+            <Link to={`/new`} > 
                 <div className='b-btn'>
                     Add list
                 </div>
@@ -34,7 +49,8 @@ function Catalog() {
         </div>
     </div>
     <div className='container grid characters-box'>
-        { characters?.map(item => (
+        
+        { filteredItems?.map(item => (
             <div className='grid' key={item.id}>
                 <Link to={`/character/${(item.name)}`} > 
                     <div>

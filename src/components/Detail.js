@@ -16,7 +16,7 @@ function Detail() {
     const [hair,setHair] = useState()
     const [alias,setAlias] = useState()
     const [abilities,setAbilitiess] = useState()
-    
+
     const [characters,setCharacters] = useState()
     const [img,setImg] = useState()
     const {charactername} = useParams();

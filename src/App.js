@@ -16,7 +16,7 @@ function App() {
     <Routes>
       <Route exact path='/space-character' element={<Catalog></Catalog>}></Route>
       <Route exact path='/character/:charactername' element={<Detail></Detail>}></Route>
-      <Route exact path='/space-character/new' element={<New></New>}></Route>
+      <Route exact path='/new' element={<New></New>}></Route>
       <Route exact path='*' element={<NotFound></NotFound>} />
     </Routes>
     <Footer></Footer>

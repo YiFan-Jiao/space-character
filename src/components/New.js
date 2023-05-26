@@ -1,9 +1,19 @@
 import React from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function New() {
   return (
-    <div>New</div>
+    <>
+    <HelmetProvider>
+        <Helmet>
+            <title>Add list</title>
+        </Helmet>
+    </HelmetProvider>
+    <div className='container'>
+
+    </div>
+    </>
   )
 }
 
