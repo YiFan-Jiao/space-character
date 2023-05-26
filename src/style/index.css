@@ -141,10 +141,6 @@ footer {
     
 }
 
-.detail-info {
-
-}
-
 .info3 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -165,5 +161,53 @@ footer {
     background-color: #5C4C46;
     border-radius: 15px;
     text-align: center;
+    cursor: pointer;
+}
+
+/* form */
+.form-box {
+    min-height: calc(100vh - 383px);
+    align-content: center;
+    justify-content: center;
+}
+
+form {
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background-color: #F2F1F2;
+    padding: 15px;
+    gap: 10px;
+}
+
+.form-head {
+    text-align: center;
+    padding:0 0 15px 0;
+}
+
+.input-box {
+    grid-template-rows: 40px 20px;
+
+}
+
+.form-input {
+    height: 40px;
+    font-size: 22px;
+    border-radius: 5px;
+    background-color: #FCFBFC;
+    padding: 5px;
+}
+
+.tips {
+    color: #ff0000;
+    font-size: 16px;
+    height: 20px;
+}
+
+.submit {
+    padding: 10px 15px;
+    background-color: #3990FD;
+    color: #fff;
+    margin-top: 15px;
     cursor: pointer;
 }
